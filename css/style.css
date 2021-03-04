@@ -1,93 +1,199 @@
-body {
-    background: white;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial;
-  }
+body{
+    font-size:80%; /* achicamos la fuente en pantallas pequeñas */  
+    width: auto;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+} 
 
-h1{
-    color: crimson;
-  }
+header{
+    background: #009288ff;
+    /*padding: 50px;*/
+    width: auto;    
+    height: 200px;
+}
 
 nav{
     background:#729fcfff;
-    height: 100px;
+    width: 100%;
+    height: 70px;
 }
 
-.boton{
-    border: 1px solid blue;
-    padding: 10px 30px;
-    text-align: right;
-    background: silver;
+
+
+.boton:hover{
+    background: rgb(129, 129, 160);
+}
+
+#tituloBanner{
+    color:white;
     text-decoration: none;
-    color: black;
+}
+
+h1{
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+#imagenBanner{
+    float:right;
+    padding-top: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+}
+
+main{
+    width: 100%;
+    column-count: 1;
+       
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+#contacto{
+    text-align: center;
 }
 
 
-#botones{
-   
-    text-align: right;
+/* fin de zona común a todas las resoluciones */
+
+
+
+/*Diseño para dispositivos con menos de 559 px*/
+
+@media screen and (max-width:559px){
+	body{
+		font-size:80%; /* achicamos la fuente en pantallas pequeñas */  
+         
+	} 
+
+    #logo{
+        float: left;
+        text-align: left;
+        width: 100px;
+        padding-top: 1%;
+    }
     
+    #botones{
+        padding-left: 10px;
+        float:left;
+        text-align:center;
+        padding-top: 5%;
+    }
+
+    .boton{
+        border: .5px solid blue;
+        padding: 3px 5px;
+        text-align: right;
+        background: silver;
+        text-decoration: none;
+        color: black;
+    }
+
+    #textoIzquierda{/*Contenido izquierdo de la página (Texto presentación)*/
+        /*border: 10px solid red;*/
+        float:left;
+        width: 5auto;
+        padding: 50px;
+        text-align: justify;
+        
+    }
+    
+    #informacionEnmedio{/*Contenido de en medio de la página (Cartel)*/
+        float:left;
+        width: auto;
+        /*padding: 50px;*/
+        padding:50px;
+        padding-left: 10%;
+        text-align: center;
+       /* border: 10px solid red;*/
+    }
+
+    #aside{/*Contenido derecho de la página (Lista)*/
+        float:left;
+        /*border: 10px solid red;*/
+        width: auto;
+        padding: 25px;
+        margin-left: 15%;
+        background: skyblue;
+        text-align: left;
+    }
 }
+
+
+/*Diseño para dispositivos con mas de 559 px*/
+
+@media screen and (min-width:560px){
+	body{
+		font-size:100%; /* achicamos la fuente en pantallas pequeñas */
+        
+        margin: 0%;
+	} 
+
+    #logo{
+        float: left;
+        text-align: left;
+        width: 100px;
+        padding-top: 10px;
+    }
+    
+    #botones{
+        float: center;
+        text-align:center;
+        padding-top: 2%;
+
+    }
+
+    .boton{
+        border: 1px solid blue;
+        padding: 10px 30px;
+        text-align: right;
+        background: silver;
+        text-decoration: none;
+        color: black;
+    }
+
+  
+  #textoIzquierda{/*Contenido izquierdo de la página (Texto presentación)*/
+        /*border: 10px solid red;*/
+        float:left;
+        width: 500px;
+        padding: 50px;
+        text-align: justify;
+        
+    }
+    #informacionEnmedio{/*Contenido de en medio de la página (Cartel)*/
+        float:left;
+        width: 350px;
+        margin: 1%;       
+        /*padding: 50px;*/
+       
+       /*border: 10px solid red;*/
+       text-align:center;
+    }
+    
+  
+    
+    #aside{/*Contenido derecho de la página (Lista)*/
+        float:left;
+        text-align:left;
+        /*border: 10px solid red;*/
+        width: 240px;
+        height: auto;
+        padding: 30px;
+        padding-top: 10px;
+        margin-top: 10%;
+        background: skyblue;
+    }
+}
+
+
 
 /*
 #boton1:hover{
     background: beige;
 }*/
 
-.boton:hover{
-    background: rgb(129, 129, 160);
-}
 
-#banner{
-    background: #009288ff;
-    padding: 50px;
-    height: 100px;
-}
-
-#tituloBanner{
-    color:white;
-}
-
-#imagenBanner{
-    float:right;
-}
-
-#content{
-   /* border: 10px solid red;*/
-    min-height: (100vh -100px -100px);
-    column-count: 1;
-}
-
-
-#informacionEnmedio{/*Contenido de en medio de la página (Cartel)*/
-    float:left;
-    width: 200px;
-    /*padding: 50px;*/
-    padding-top: 50px;
-   /* border: 10px solid red;*/
-}
-
-#textoIzquierda{/*Contenido izquierdo de la página (Texto presentación)*/
-    /*border: 10px solid red;*/
-    float:left;
-    width: 500px;
-    padding: 50px;
-    text-align: justify;
-    
-}
-
-#aside{/*Contenido derecho de la página (Lista)*/
-    float:right;
-    /*border: 10px solid red;*/
-    width: 200px;
-    padding: 50px;
-    background: skyblue;
-}
-
-footer{
-    width: 100%;
-    height: 100px;
-}
-
-#contacto{
-    text-align: center;
-}
